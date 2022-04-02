@@ -1,0 +1,36 @@
+<h1 mat-dialog-title>Add User Form</h1>
+<div mat-dialog-content>
+    <form [formGroup]="userForm">
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input type="text" formControlName="userName" matInput placeholder="Name" minlength="3" maxlength="15">
+        </mat-form-field>
+        <div class="text">Between 3-14 characters</div>
+        
+        <mat-form-field appearance="outline">
+            <mat-label>Age</mat-label>
+            <input type="number" formControlName="age" matInput placeholder="1" min="1" max="100">
+        </mat-form-field>
+        <div class="text">Between 1-100 range</div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Gender</mat-label>
+            <mat-select formControlName="gender" placeholder="Gender">
+                <mat-option value="Female">Female</mat-option>
+                <mat-option value="Male">Male</mat-option>
+                <mat-option value="Other">Other</mat-option>
+            </mat-select>
+        </mat-form-field>
+        <div class="text">Gender required</div>
+
+        <mat-form-field appearance="outline">
+            <mat-label>Country</mat-label>
+            <input type="text" formControlName="country" matInput placeholder="Country" minlength="4" maxlength="21">
+        </mat-form-field>
+        <div class="text">Between 4-21 characters</div>
+    </form>
+</div>
+<div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addUser()">{{actionBtn}}</button>
+</div>

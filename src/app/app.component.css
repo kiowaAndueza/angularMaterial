@@ -1,0 +1,27 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.container{
+    margin-left: 6em;
+    margin-top: 1em;
+
+}
+table {
+    width: 100%;
+  }
+
+  
+  .mat-form-field {
+    margin-bottom: 0.5em;
+    font-size: 14px;
+    width: 90%;
+  }
+
+  .mat-elevation-z8{
+      width: 90%;
+  }
+  
+  td, th {
+    width: 22%;
+  }

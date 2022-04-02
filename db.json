@@ -1,0 +1,32 @@
+{
+  "userList": [
+    {
+      "userName": "Luis",
+      "age": 22,
+      "gender": "Male",
+      "country": "Spain",
+      "id": 2
+    },
+    {
+      "userName": "Raquel",
+      "age": 87,
+      "gender": "Female",
+      "country": "United States",
+      "id": 3
+    },
+    {
+      "userName": "Alexis",
+      "age": 2,
+      "gender": "Male",
+      "country": "Peru",
+      "id": 4
+    },
+    {
+      "userName": "Penelope",
+      "age": 52,
+      "gender": "Other",
+      "country": "Poland",
+      "id": 5
+    }
+  ]
+}
