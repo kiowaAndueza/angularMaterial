@@ -3,13 +3,13 @@
     <form [formGroup]="userForm">
         <mat-form-field appearance="outline">
             <mat-label>Name</mat-label>
-            <input type="text" formControlName="userName" matInput placeholder="Name" minlength="3" maxlength="15">
+            <input type="text" formControlName="userName" matInput placeholder="Name">
         </mat-form-field>
         <div class="text">Between 3-14 characters</div>
         
         <mat-form-field appearance="outline">
             <mat-label>Age</mat-label>
-            <input type="number" formControlName="age" matInput placeholder="1" min="1" max="100">
+            <input type="number" formControlName="age" matInput placeholder="1">
         </mat-form-field>
         <div class="text">Between 1-100 range</div>
 
@@ -31,6 +31,6 @@
     </form>
 </div>
 <div mat-dialog-actions [align]="'end'">
-    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
-    <button style="margin-left: 8px;" mat-raised-button color="primary" (click)="addUser()">{{actionBtn}}</button>
+    <button type="button" mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+    <button type="submit" style="margin-left: 8px;" mat-raised-button color="primary" (click)="onSubmit()">{{ id ? 'Update' : 'Save' }}</button>
 </div>
