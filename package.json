@@ -1,10 +1,8 @@
 {
   "name": "crud-form",
   "version": "0.0.0",
-  "homepage": "https://kiowaandueza.github.io/crudAngularMaterial",
   "scripts": {
     "ng": "ng",
-    "deploy": "gh-pages -d build",
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
