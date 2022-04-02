@@ -1,6 +1,7 @@
 {
   "name": "crud-form",
   "version": "0.0.0",
+  "homepage": "https://kiowaandueza.github.io/crudAngularMaterial",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
