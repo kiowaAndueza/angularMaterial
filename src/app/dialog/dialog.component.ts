@@ -1,6 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ApiService } from '../services/api.service';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog'
 import { UserModel } from '../models/user.model';
 import { UsersService } from '../services/users.service';
@@ -13,26 +12,18 @@ export class DialogComponent implements OnInit {
 
   userForm !: FormGroup;
 
-  constructor(private formBuilder: FormBuilder, private api: ApiService,
+  constructor(private formBuilder: FormBuilder,
     @Inject(MAT_DIALOG_DATA) public editData: any,
     private dialogRef: MatDialogRef<DialogComponent>,
     private userSvc: UsersService) { }
 
   ngOnInit(): void {
     this.buildForm(this.editData)
-
-    // if (this.editData) {
-    //   this.actionBtn = "Update";
-    //   this.userForm.controls['userName'].setValue(this.editData.userName);
-    //   this.userForm.controls['age'].setValue(this.editData.age);
-    //   this.userForm.controls['gender'].setValue(this.editData.gender);
-    //   this.userForm.controls['country'].setValue(this.editData.country);
-    // }
   }
 
   onSubmit(): void {
     if (this.userForm.invalid) {
-      alert('hay errores')
+      alert('Hay errores')
       return;
     }
 
@@ -51,23 +42,7 @@ export class DialogComponent implements OnInit {
     } catch (e) {
       console.error(e)
     }
-    // if (this.editData) {
-    //   this.updateUser();
-    // } else {
-    //   if (this.userForm.valid) {
-    //     this.api.postUser(this.userForm.value)
-    //       .subscribe({
-    //         next: (res) => {
-    //           alert("Product added successfuly");
-    //           this.userForm.reset();
-    //           this.dialogRef.close('save');
-    //         },
-    //         error: () => {
-    //           alert("Error while adding the product")
-    //         }
-    //       })
-    //   }
-    // }
+  
 
   }
 
@@ -78,17 +53,7 @@ export class DialogComponent implements OnInit {
     } catch (e) {
       console.error(e)
     }
-    // this.api.putUser(this.userForm.value, this.editData.id)
-    //   .subscribe({
-    //     next: (res) => {
-    //       alert("User updated successfully");
-    //       this.userForm.reset();
-    //       this.dialogRef.close('update');
-    //     },
-    //     error: () => {
-    //       alert("Error while updating the user");
-    //     }
-    //   })
+
   }
 
 
